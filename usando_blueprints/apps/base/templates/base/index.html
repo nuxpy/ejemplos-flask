@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>Mi sistema con apps - {% block title %}{% endblock %}</title>
+    </head>
+    <body>
+        <ul>
+        {% for item in current_menu.children %}
+            <li><a href="{{ item.url }}">{{ item.text }}</a></li>
+        {% endfor %}
+        </ul>
+        {% block content %}{% endblock %}
+    </body>
+</html>
