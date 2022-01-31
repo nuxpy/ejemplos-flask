@@ -17,7 +17,7 @@ login_manager.init_app(app)
 
 #--------- BASE DE DATOS ---------#
 db = PostgresqlDatabase('roles_db', user='mibase', password='mibase',
-    host='localhost', port=5438, autorollback=True)
+    host='localhost', port=5432, autorollback=True)
 
 class BaseModel(Model):
     class Meta:
@@ -213,4 +213,4 @@ def logout():
     return redirect(url_for('index'))
 
 #--------- Arranque del sistema ---------#
-app.run(host='0.0.0.0', port='8082', debug=True)
+app.run(host='0.0.0.0', port='8080', debug=True)
