@@ -105,7 +105,7 @@ class Menu(BaseModel):
                 Menu.create(**d)
 
 class MenuForRole(BaseModel):
-    menu_id = ForeignKeyField(Users, null=True)
+    menu_id = ForeignKeyField(Menu, null=True)
     role_id = ForeignKeyField(Role, null=True)
     
     def load_data():
